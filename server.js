@@ -5,7 +5,9 @@ const bodyParser = require('body-parser');
 
 // Initialize the app
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://mialyn.saraban.in'  // Replace with your frontend domain
+}));
 app.use(bodyParser.json());
 
 // MongoDB connection
